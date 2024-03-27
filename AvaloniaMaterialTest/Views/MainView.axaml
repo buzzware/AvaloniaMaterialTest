@@ -3,6 +3,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:AvaloniaMaterialTest.ViewModels"
+             xmlns:controls="clr-namespace:Material.Styles.Controls;assembly=Material.Styles"
+             xmlns:assists="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaMaterialTest.Views.MainView"
              x:DataType="vm:MainViewModel">
@@ -12,5 +14,33 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<StackPanel Width="400" Spacing="24">
+		<controls:Card Margin="16">
+			<TextBlock Classes="Headline6" Text="{Binding Greeting}"/>
+		</controls:Card>
+		
+		<Button 
+			Content="Hello"
+			Classes="accent"
+		/>
+		
+		<Button 
+			Content="Hello"
+			Classes="light"
+		/>
+		
+		<Button 
+			Content="Hello"
+			Classes="dark"
+		/>
+		
+		<TextBox 
+			UseFloatingWatermark="True"
+			Text="Fred"
+			assists:TextFieldAssist.Label="First Name" 
+			assists:TextFieldAssist.Hints="your name" 
+		/>
+		
+	</StackPanel>	
+	
 </UserControl>
