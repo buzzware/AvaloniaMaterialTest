@@ -7,9 +7,9 @@
              xmlns:assists="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
              xmlns:visualBasic="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic.Core"
              xmlns:generic="clr-namespace:System.Collections.Generic;assembly=System.Collections"
-             xmlns:behaviours="clr-namespace:TestAutoCompleteBehaviour.Behaviours"
-             xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+						xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+						xmlns:behaviours="clr-namespace:AvaloniaMaterialTest.Behaviours"
+						mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AvaloniaMaterialTest.Views.MainView"
              x:DataType="vm:MainViewModel">
   <Design.DataContext>
@@ -57,7 +57,7 @@
 				BorderBrush="Transparent"
 			>
 				<Interaction.Behaviors>
-					<behaviours:AutoCompleteZeroMinimumPrefixLengthDropdownBehaviour/>
+					<behaviours:AutoCompleteDropdownBehaviour/>
 				</Interaction.Behaviors>
 				
 				<AutoCompleteBox.ItemsSource>

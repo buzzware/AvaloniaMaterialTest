@@ -1,24 +1,19 @@
-﻿using Avalonia.Controls;
-using Avalonia.Interactivity;
-using Avalonia.Xaml.Interactivity;
-using System;
-using System.Threading;
+﻿using System;
 using System.Threading.Tasks;
-using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Controls.Presenters;
-using Avalonia.Controls.Templates;
 using Avalonia.Input;
-using Avalonia.Layout;
-using Avalonia.Markup.Xaml.Templates;
+using Avalonia.Interactivity;
 using Avalonia.Media;
+using Avalonia.Xaml.Interactivity;
 using Material.Icons;
 using Material.Icons.Avalonia;
 
-namespace TestAutoCompleteBehaviour.Behaviours
+namespace AvaloniaMaterialTest.Behaviours
 {
-    public class AutoCompleteZeroMinimumPrefixLengthDropdownBehaviour : Behavior<AutoCompleteBox>
+    public class AutoCompleteDropdownBehaviour : Behavior<AutoCompleteBox>
     {
-        static AutoCompleteZeroMinimumPrefixLengthDropdownBehaviour()
+        static AutoCompleteDropdownBehaviour()
         {
         }
 
