@@ -3,7 +3,7 @@
              xmlns:local="using:AvaloniaMaterialTest"
              xmlns:themes="clr-namespace:Material.Styles.Themes;assembly=Material.Styles"
              x:Class="AvaloniaMaterialTest.App"
-             RequestedThemeVariant="Default">
+             RequestedThemeVariant="Light">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
@@ -11,6 +11,6 @@
     </Application.DataTemplates>
 
     <Application.Styles>
-        <themes:MaterialTheme PrimaryColor="Purple" SecondaryColor="Lime" />
+        <themes:MaterialTheme PrimaryColor="Indigo" SecondaryColor="LightGreen" />
     </Application.Styles>
 </Application>
