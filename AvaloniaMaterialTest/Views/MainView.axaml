@@ -62,7 +62,7 @@
 			</AutoCompleteBox.ItemTemplate>
 		</AutoCompleteBox>
 		
-		<ComboBox>
+		<ComboBox  Theme="{StaticResource MaterialOutlineComboBox}" assists:ComboBoxAssist.Label="State">
 			<ComboBox.ItemsSource>
 				<generic:List x:TypeArguments="x:String">
 					<x:String>Alabama</x:String>
