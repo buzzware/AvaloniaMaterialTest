@@ -10,12 +10,4 @@ public partial class MainView : UserControl
     {
         InitializeComponent();
     }
-
-    private void InputElement_OnTapped(object? sender, TappedEventArgs e) {
-        autoComplete.IsDropDownOpen = !autoComplete.IsDropDownOpen;
-    }
-
-    private void Icon_OnTapped(object? sender, TappedEventArgs e) {
-        Debug.WriteLine("Icon_OnTapped");
-    }
 }

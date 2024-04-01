@@ -91,22 +91,8 @@ namespace AvaloniaMaterialTest.Behaviours
             {
                 var prop = AssociatedObject.GetType().GetProperty("TextBox", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
                 var tb = (TextBox?)prop?.GetValue(AssociatedObject);
-
-                var materialIcon = new MaterialIcon() {
-                    Kind=MaterialIconKind.ArrowDownDropCircleOutline, 
-                    Foreground = Brushes.Black
-                };
                 
-                ContentPresenter content = new ContentPresenter();
-                content.Content = new Viewbox() {
-                    //Stretch = Stretch.Uniform, 
-                    Child = materialIcon
-                };
-
-                //Func<IServiceProvider, IControl> template = serviceProvider => content;
-
                 var btn = new Viewbox() {
-                    //VerticalAlignment = VerticalAlignment.Stretch,
                     MinHeight = 32,
                     MinWidth = 32,
                     MaxHeight = AssociatedObject.FontSize*2,
@@ -122,38 +108,7 @@ namespace AvaloniaMaterialTest.Behaviours
                     AssociatedObject.Text = null;
                     ShowDropdown();
                 }; 
-                //btn.Tapped += (s, e) => ShowDropdown(); 
-                
-                //Tapped += (s, e) => ShowDropdown();
-                
-                    // var btn = new Button()
-                    // {
-                    //     Content = materialIcon,
-                    //     Background = Brushes.Transparent,
-                    //     BorderThickness = new Thickness(0),
-                    //     Margin = new(0),
-                    //     Template = new FuncControlTemplate((control, scope) => content),
-                    //     // Template = new ControlTemplate() {
-                    //     //     Content = new MaterialIcon() { Kind=MaterialIconKind.ArrowDownDropCircleOutline }
-                    //     // },
-                    //     // Margin = new(3),
-                    //     ClickMode = ClickMode.Press
-                    // };
-                    // btn.Click += (s, e) => ShowDropdown();
-                
-                    // var btn = new MaterialIcon() { Kind=MaterialIconKind.ArrowDownDropCircleOutline };
-                    // btn.Width = 60;
-                    // btn.Tapped += (s, e) => ShowDropdown();  
-
-                    // var btn = new Button()
-                    // {
-                    //     Content = materialIcon,
-                    //     Margin = new(3),
-                    //     ClickMode = ClickMode.Press
-                    // };
-                    // btn.Click += (s, e) => ShowDropdown();
-
-                    tb.InnerRightContent = btn;
+                tb.InnerRightContent = btn;
             }
         }
 

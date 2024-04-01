@@ -23,71 +23,44 @@
 			<TextBlock Classes="Headline6" Text="{Binding Greeting}"/>
 		</controls:Card>
 		
-		<Border BorderBrush="Black" BorderThickness="1" Background="Bisque">
-			<Viewbox HorizontalAlignment="Right" Height="80" >
-							<Viewbox
-								Cursor="Hand"
-								Tapped="Icon_OnTapped"
-							>
-								<avalonia:MaterialIcon Kind="ArrowDownDropCircleOutline" Foreground="Black" Background="Transparent"/>	
-							</Viewbox>				
-					<!-- <Button> -->
-					<!-- 	<Button.ContentTemplate> -->
-					<!-- 		<DataTemplate> -->
-					<!-- 			<Viewbox> -->
-					<!-- 				<avalonia:MaterialIcon Kind="ArrowDownDropCircleOutline"/>	 -->
-					<!-- 			</Viewbox>				 -->
-					<!-- 		</DataTemplate> -->
-					<!-- 	</Button.ContentTemplate> -->
-					<!-- </Button> -->
-			</Viewbox>
-		</Border>
-		
-		
-		<!-- <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"> -->
-			<AutoCompleteBox 
-				x:Name="autoComplete"
-				IsTextCompletionEnabled="True"
-				FilterMode="Contains"
-				HorizontalAlignment="Stretch"
-				Width="200"
-				Padding="8,8"
-				Foreground="DarkRed"
-				Background="{DynamicResource MaterialPaperBrush}"
-				BorderBrush="Transparent"
-			>
-				<Interaction.Behaviors>
-					<behaviours:AutoCompleteDropdownBehaviour/>
-				</Interaction.Behaviors>
-				
-				<AutoCompleteBox.ItemsSource>
-					<generic:List x:TypeArguments="x:String">
-						<x:String>Alabama Alabama Alabama Alabama Alabama Alabama Alabama </x:String>
-						<x:String>Alaska Alaska Alaska Alaska Alaska Alaska Alaska Alaska </x:String>
-						<x:String>Arizona</x:String>
-						<x:String>Arkansas</x:String>
-						<x:String>California</x:String>
-						<x:String>Colorado</x:String>
-						<x:String>Connecticut</x:String>
-						<x:String>Delaware</x:String>
-					</generic:List>
-				</AutoCompleteBox.ItemsSource>				
-				
-				<AutoCompleteBox.ItemTemplate>
-					<DataTemplate x:DataType="x:String">
-						<TextBlock Text="{Binding .}"/>							
-						<!-- <DockPanel LastChildFill="True" Margin="2" > -->
-						<!-- 	<Button Content="X" DockPanel.Dock="Right"/> -->
-						<!-- 	<TextBlock Text="{Binding .}" DockPanel.Dock="Left"/> -->
-						<!-- </DockPanel> -->
-					</DataTemplate>
-				</AutoCompleteBox.ItemTemplate>
-				<!-- <visualBasic:Interaction.Behaviors> -->
-				<!-- 	<AutoCompleteZeroMinimumPrefixLengthDropdownBehaviour/> -->
-				<!-- </visualBasic:Interaction.Behaviors> -->
-			</AutoCompleteBox>
-		<!-- 	<Button Content="V" Tapped="InputElement_OnTapped"/> -->
-		<!-- </StackPanel> -->
+		<AutoCompleteBox 
+			x:Name="autoComplete"
+			IsTextCompletionEnabled="True"
+			FilterMode="Contains"
+			HorizontalAlignment="Stretch"
+			Width="200"
+			Padding="8,8"
+			Foreground="DarkRed"
+			Background="{DynamicResource MaterialPaperBrush}"
+			BorderBrush="Transparent"
+		>
+			<Interaction.Behaviors>
+				<behaviours:AutoCompleteDropdownBehaviour/>
+			</Interaction.Behaviors>
+			
+			<AutoCompleteBox.ItemsSource>
+				<generic:List x:TypeArguments="x:String">
+					<x:String>Alabama Alabama Alabama Alabama Alabama Alabama Alabama </x:String>
+					<x:String>Alaska Alaska Alaska Alaska Alaska Alaska Alaska Alaska </x:String>
+					<x:String>Arizona</x:String>
+					<x:String>Arkansas</x:String>
+					<x:String>California</x:String>
+					<x:String>Colorado</x:String>
+					<x:String>Connecticut</x:String>
+					<x:String>Delaware</x:String>
+				</generic:List>
+			</AutoCompleteBox.ItemsSource>				
+			
+			<AutoCompleteBox.ItemTemplate>
+				<DataTemplate x:DataType="x:String">
+					<TextBlock Text="{Binding .}"/>							
+					<!-- <DockPanel LastChildFill="True" Margin="2" > -->
+					<!-- 	<Button Content="X" DockPanel.Dock="Right"/> -->
+					<!-- 	<TextBlock Text="{Binding .}" DockPanel.Dock="Left"/> -->
+					<!-- </DockPanel> -->
+				</DataTemplate>
+			</AutoCompleteBox.ItemTemplate>
+		</AutoCompleteBox>
 		
 		<ComboBox>
 			<ComboBox.ItemsSource>
@@ -103,24 +76,6 @@
 				</generic:List>
 			</ComboBox.ItemsSource>				
 		</ComboBox>
-		
-		
-		<!-- <AutoCompleteBox Grid.Column="1" Margin="10" Name="ACBBehaviour" -->
-		<!-- 	IsTextCompletionEnabled="True" -->
-		<!-- 	FilterMode="Contains" -->
-		<!-- 	Watermark="Attached Behaviour (down arrow or F4 opens dropdown when empty string ... also has clickable button)"> -->
-		<!-- 	<i:Interaction.Behaviors> -->
-		<!-- 		<bh:AutoCompleteZeroMinimumPrefixLengthDropdownBehaviour/> -->
-		<!-- 	</i:Interaction.Behaviors> -->
-		<!-- 	<AutoCompleteBox.ItemTemplate> -->
-		<!-- 		<DataTemplate> -->
-		<!-- 			<DockPanel LastChildFill="True" Margin="2" > -->
-		<!-- 				<Button Content="X" DockPanel.Dock="Right"/> -->
-		<!-- 				<TextBlock Text="{Binding}" DockPanel.Dock="Left"/> -->
-		<!-- 			</DockPanel> -->
-		<!-- 		</DataTemplate> -->
-		<!-- 	</AutoCompleteBox.ItemTemplate> -->
-		<!-- </AutoCompleteBox>		 -->
 		
 		<Button 
 			Content="Hello"
